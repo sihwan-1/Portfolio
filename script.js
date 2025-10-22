@@ -1,19 +1,4 @@
 $(window).on("scroll", function () {
-    $(".txt-box-1 p").each(function (i) {
-      const elementTop = $(this).offset().top;
-      const windowBottom = $(window).scrollTop() + $(window).height();
-
-      if (windowBottom > elementTop + 50) { // 50px 정도 들어오면 보이기 시작
-        const delay = i * 00; // 한 줄씩 딜레이 (0.2초씩)
-        $(this).delay(delay).queue(function (next) {
-          $(this).addClass("show");
-          next();
-        });
-      }
-    });
-  });
- 
- $(window).on("scroll", function () {
     const section = $(".section-2");
     const outline = section.find(".text-outline");
 
@@ -23,9 +8,112 @@ $(window).on("scroll", function () {
     const windowHeight = $(window).height();
 
     // 화면에 섹션이 보일 때만 작동
-    if (scrollTop + windowHeight > sectionTop && scrollTop < sectionTop + sectionHeight) {
-      const progress = (scrollTop + windowHeight - sectionTop) / (windowHeight + sectionHeight);
-      const moveY = -progress * 800; // 위로 100px 이동 (숫자 조절 가능)
-      outline.css("transform", `translateY(${moveY}px) rotate(90deg)`);
+    if (
+        scrollTop + windowHeight > sectionTop &&
+        scrollTop < sectionTop + sectionHeight
+    ) {
+        const progress =
+            (scrollTop + windowHeight - sectionTop) /
+            (windowHeight + sectionHeight);
+        const moveY = -progress * 800; // 위로 100px 이동 (숫자 조절 가능)
+        outline.css("transform", `translateY(${moveY}px) rotate(90deg)`);
     }
-  });
+});
+
+// 스크롤 트리거 플러그인 활성화
+gsap.registerPlugin(ScrollTrigger);
+
+console.clear();
+
+var $window = $(window);
+var windowWidth = $window.width();
+var windowHeight = $window.height();
+
+$window.resize(function () {
+    windowWidth = $(window).width();
+    windowHeight = $window.height();
+});
+
+function setTimelineToEl(timeline, $el) {
+    $el.data("gsap-timeline", timeline);
+}
+
+function killTimeline($el) {
+    var timeline = $el.data("gsap-timeline");
+
+    if (timeline) {
+        timeline.kill();
+    }
+}
+
+function SectionTop__init() {
+    var wrapMarginRight = 64;
+    var $contentLi = $(".section-top__content > li");
+    var $bgLi = $(".section-top__bg > li");
+    var $bgLiChild = $bgLi.find(" > div");
+
+    var animationDuration = 600;
+
+    var updateBgLiChildWidth = function () {
+        var width = windowWidth - wrapMarginRight;
+        $bgLiChild.stop().width(width);
+    };
+
+    $window.resize(function () {
+        updateBgLiChildWidth();
+    });
+    updateBgLiChildWidth();
+
+    $contentLi.mouseenter(function () {
+        var $this = $(this);
+        var index = $this.index();
+        var $selectedBgLi = $bgLi.eq(index);
+        var $selectedBgLiChild = $bgLiChild.eq(index);
+
+        $selectedBgLi.addClass("active");
+
+        var timeline = gsap.timeline();
+
+        setTimelineToEl(timeline, $selectedBgLiChild);
+        setTimelineToEl(timeline, $selectedBgLi);
+
+        var animationDurationSeconds = animationDuration / 1000;
+
+        timeline.to($selectedBgLiChild, {
+            left: 0,
+            duration: animationDurationSeconds
+        });
+
+        timeline.to(
+            $selectedBgLi,
+            {
+                left: 0,
+                right: 0,
+                duration: animationDurationSeconds
+            },
+            "-=" + animationDurationSeconds
+        );
+    });
+
+    $contentLi.mouseleave(function () {
+        var $this = $(this);
+        var index = $this.index();
+        var $selectedBgLi = $bgLi.eq(index);
+        var $selectedBgLiChild = $bgLiChild.eq(index);
+
+        $selectedBgLi.removeClass("active");
+
+        killTimeline($selectedBgLi);
+        $selectedBgLi.css({
+            left: "",
+            right: ""
+        });
+
+        killTimeline($selectedBgLiChild);
+        $selectedBgLiChild.css({
+            left: ""
+        });
+    });
+}
+
+SectionTop__init();
