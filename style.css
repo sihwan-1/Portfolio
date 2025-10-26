@@ -5,7 +5,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+p {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -81,11 +82,18 @@ header > ul > li > a {
     color: #ffff33;
 }
 
+.section-1 .circle-box > div {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    top: 10%;
+    right: -20%;
+}
+
 .section-1 .abs-center-middle {
     position: absolute;
-    top: 81%;
-    left: 86%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
 }
 
 .section-1 .out-circle {
@@ -336,7 +344,7 @@ header > ul > li > a {
 
 /* ------------------------------------------section-2 end------------------------------------------ */
 
-/* ------------------------------------------section-3 start------------------------------------------ */
+/* ------------------------------------------section-4 start------------------------------------------ */
 .section-4 {
     padding: 80px 180px;
 }
@@ -474,4 +482,44 @@ header > ul > li > a {
 
 .section-top__bg > li:nth-child(3) > div {
     left: -200%;
+}
+/* ------------------------------------------section-3 end------------------------------------------ */
+
+/* ------------------------------------------footer start------------------------------------------ */
+footer {
+    padding: 125px 180px;
+}
+
+footer > .ft-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer > .ft-box > .contact > span {
+    font-size: 60px;
+    font-weight: 700;
+    display: block;
+}
+
+footer > .ft-box > .contact > span:nth-child(2) {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+footer > .ft-box > .contact > .img-box {
+    display: flex;
+    gap: 14px;
+}
+
+footer > .ft-box > .contact > .img-box > div {
+    width: 25px;
+    height: 25px;
+}
+
+footer > .ft-box > .ft-txt > p {
+    text-align: right;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 35.2px;
 }
