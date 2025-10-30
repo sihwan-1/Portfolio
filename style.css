@@ -12,12 +12,23 @@ p {
     list-style: none;
 }
 
+html {
+    scroll-behavior:smooth;
+}
+
 body {
     overflow-x: hidden;
     background-color: #0a0a0a;
     color: #fff;
     letter-spacing: -2%;
+    transition: background-color .8s;
 }
+
+
+body.white {
+    background-color: #fff;
+}
+
 
 a {
     color: inherit;
@@ -39,6 +50,12 @@ header {
     display: flex;
     padding: 40px 80px;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
 }
 
 header > .right-menu {
@@ -78,7 +95,7 @@ header > ul > li > a {
 }
 
 .section-1 > .main-title > h1 > span {
-    margin-right: -25px;
+    margin-right: -44px;
     color: #ffff33;
 }
 
@@ -124,7 +141,6 @@ header > ul > li > a {
 
 /* ------------------------------------------section-2 start------------------------------------------ */
 .section-2 {
-    background-color: #fff;
     padding: 72px 180px 100px 180px;
     color: #0a0a0a;
     position: relative;
@@ -136,15 +152,17 @@ header > ul > li > a {
 }
 
 .section-2 > .txt-box-1 > div > span {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
     font-size: 60px;
     font-weight: 600;
+    display: block;
 }
 
 .section-2 > .txt-box-1 > div > p {
     font-size: 18px;
     font-weight: 400;
     line-height: 28.8px;
+    margin-bottom: 40px;
 }
 
 .section-2 > .txt-box-2 {
@@ -162,7 +180,6 @@ header > ul > li > a {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 20px;
-    background-color: #fff;
     color: #0a0a0a;
 }
 .section-2 > .txt-box-2 > div > div {
@@ -198,6 +215,10 @@ header > ul > li > a {
 /* ------------------------------------------section-3 start------------------------------------------ */
 .section-3 {
     padding: 128px 180px;
+}
+
+body.white .section-3 > h3 {
+    color: #0a0a0a;
 }
 
 .section-3 > h3 {
@@ -390,15 +411,17 @@ header > ul > li > a {
     position: relative;
 }
 
-/* .section-top 시작 */
-.section-top__wrap {
-    margin-right: 64px;
-}
-
 .section-top__content > li {
     position: relative;
     z-index: 2;
     color: white;
+    font-weight: bold;
+}
+
+.section-top__content > li:nth-child(2) {
+    position: relative;
+    z-index: 2;
+    color: #0a0a0a;
     font-weight: bold;
 }
 
@@ -411,8 +434,16 @@ header > ul > li > a {
   flex-direction: column;
 }
 
-.section-top__content > li:hover > a > * {
+.section-top__content > li:nth-child(1):hover > a > * {
+    color: #E482AA;
+}
+
+.section-top__content > li:nth-child(2):hover > a > * {
     color: #0a0a0a;
+}
+
+.section-top__content > li:nth-child(3):hover > a > * {
+    color: #1D2C4A;
 }
 
 .section-top__content > li > a > span:first-child {
@@ -447,7 +478,7 @@ header > ul > li > a {
 
 .section-top__bg > li:nth-child(2) {
     left: 33.333%;
-    right: 66.666%;
+    right: 33.333%;
     background-color: #FBF8F4;
 }
 

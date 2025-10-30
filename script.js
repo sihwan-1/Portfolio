@@ -20,6 +20,20 @@ $(window).on("scroll", function () {
     }
 });
 
+$(window).scroll(function() {
+    var scrollPos = $(window).scrollTop();
+
+    if (scrollPos < 1010){
+    $("body").removeClass("white");
+    }
+    if (scrollPos > 1020) {
+    $("body").addClass("white");
+    }
+    if (scrollPos > 1820){
+    $("body").removeClass("white");
+    }
+});
+
 // 스크롤 트리거 플러그인 활성화
 gsap.registerPlugin(ScrollTrigger);
 
