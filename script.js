@@ -1,3 +1,5 @@
+AOS.init();
+
 $(window).on("scroll", function () {
     const section = $(".section-2");
     const outline = section.find(".text-outline");
@@ -15,7 +17,7 @@ $(window).on("scroll", function () {
         const progress =
             (scrollTop + windowHeight - sectionTop) /
             (windowHeight + sectionHeight);
-        const moveY = -progress * 800; // 위로 100px 이동 (숫자 조절 가능)
+        const moveY = -progress * 1300; // 위로 100px 이동 (숫자 조절 가능)
         outline.css("transform", `translateY(${moveY}px) rotate(90deg)`);
     }
 });
