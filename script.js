@@ -25,16 +25,20 @@ $(window).on("scroll", function () {
 $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
 
-    if (scrollPos < 1010){
+    if (scrollPos < 710){
     $("body").removeClass("white");
     }
-    if (scrollPos > 1020) {
+    if (scrollPos > 720) {
     $("body").addClass("white");
     }
     if (scrollPos > 1820){
     $("body").removeClass("white");
     }
 });
+
+$(document).ready(function() {
+      $(".section-1 .main-title h1").addClass("show"); // 자동으로 클래스 추가!
+    });
 
 // 스크롤 트리거 플러그인 활성화
 gsap.registerPlugin(ScrollTrigger);

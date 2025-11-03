@@ -92,13 +92,23 @@ header > ul > li > a {
     padding-left: 180px;
 }
 
-.section-1 > .main-title > h1 {
+.section-1 > .main-title > div {
+    overflow: hidden;
+}
+
+.section-1 > .main-title > div > h1 {
     font-size: 130px;
     font-weight: 400;
     line-height: 150px;
+    transform: translateY(100%);
+    transition: all 1.5s .6s;
 }
 
-.section-1 > .main-title > h1 > span {
+.section-1 > .main-title > div > h1.show {
+    transform: translateY(0);
+}
+
+.section-1 > .main-title h1 > span {
     margin-right: -24px;
     color: #ffff33;
 }
@@ -265,7 +275,7 @@ body.white .section-3 > h3 {
 .section-3 > .site-box > div > .title > div {
     font-size: 300px;
     font-size: 300;
-    color: #151515;
+    color: #222222;
     overflow: hidden;
 }
 
@@ -349,6 +359,26 @@ body.white .section-3 > h3 {
     opacity: 0;
     visibility: hidden;
     transition: all 0.7s;
+    position: relative;
+}
+
+.section-3 > .site-box > div > .content > .img-box > a {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.section-3 > .site-box > div > .content > .img-box:hover > a {
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    border: 1px solid #fff;
+    padding: 4px 10px;
 }
 
 .section-3 > .site-box > div:hover > .content > .img-box {
