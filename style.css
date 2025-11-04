@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Sequel100Black-45";
+    src: url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.eot");
+    src: url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/ab80d41fb980ff40273bb0028779b41e.svg#Sequel100Black-45")format("svg");
+}
+
 body,
 ul,
 li,
@@ -24,12 +34,6 @@ body {
     transition: background-color .8s;
 }
 
-
-body.white {
-    background-color: #fff;
-}
-
-
 a {
     color: inherit;
     text-decoration: none;
@@ -44,6 +48,10 @@ img {
 /* ------------------------------------------normalize end------------------------------------------ */
 
 /* ------------------------------------------custom start------------------------------------------ */
+
+body.white {
+    background-color: #fff;
+}
 
 /* ------------------------------------------header start------------------------------------------ */
 body.white header {
@@ -60,6 +68,7 @@ header {
     width: 100%;
     box-sizing: border-box;
     z-index: 999;
+    font-family: 'Oswald', sans-serif;
 }
 
 header > .right-menu {
@@ -86,6 +95,7 @@ header > ul > li > a {
     display: flex;
     align-items: center;
     overflow: hidden;
+    font-family: "Sequel100Black-45";
 }
 
 .section-1 > .main-title {
@@ -101,24 +111,40 @@ header > ul > li > a {
     font-weight: 400;
     line-height: 150px;
     transform: translateY(100%);
-    transition: all 1.5s .6s;
+    transition: all 1.2s .3s;
+    display: flex;
+}
+
+.section-1 > .main-title > div:nth-child(2) > h1 {
+    transition: all 1.2s .6s;
+}
+
+.section-1 > .main-title > div:nth-child(3) > h1 {
+    transition: all 1.2s .9s;
+}
+
+.section-1 > .main-title > div:nth-child(4) > h1 {
+    transition: all 1.2s 1.2s;
 }
 
 .section-1 > .main-title > div > h1.show {
     transform: translateY(0);
 }
 
-.section-1 > .main-title h1 > span {
-    margin-right: -24px;
+.section-1 > .main-title h1 > span:first-child {
     color: #ffff33;
+}
+
+.section-1 .circle-box {
+    position: relative;
+    top: 0%;
+    left: -10%;
 }
 
 .section-1 .circle-box > div {
     position: relative;
     width: 800px;
     height: 800px;
-    top: 10%;
-    right: -20%;
 }
 
 .section-1 .abs-center-middle {
@@ -159,6 +185,7 @@ header > ul > li > a {
     color: #0a0a0a;
     position: relative;
     overflow: hidden;
+    font-family: 'Pretendard', sans-serif;
 }
 
 .section-2 > .txt-box-1 {
@@ -195,6 +222,7 @@ header > ul > li > a {
     font-weight: 700;
     margin-bottom: 20px;
     color: #0a0a0a;
+    font-family: 'Oswald', sans-serif;
 }
 .section-2 > .txt-box-2 > div > div {
     display: flex;
@@ -213,7 +241,7 @@ header > ul > li > a {
 .section-2 > .text-outline {
     position: absolute;
     top: 90%;
-    right: -30%;
+    right: -20%;    
     z-index: 0;
     transform: rotate(90deg);
 }
@@ -223,6 +251,7 @@ header > ul > li > a {
     -webkit-text-stroke: 2px #949494;
     font-weight: 800;
     font-size: 300px;
+    font-family: 'Oswald', sans-serif;
 }
 /* ------------------------------------------section-2 end------------------------------------------ */
 
@@ -240,6 +269,7 @@ body.white .section-3 > h3 {
     font-size: 20px;
     font-weight: 700;
     color: #ffff33;
+    font-family: "Sequel100Black-45";
 }
 
 .section-3 > .site-box {
@@ -270,13 +300,15 @@ body.white .section-3 > h3 {
 .section-3 > .site-box > div > .title > span {
     font-size: 70px;
     font-weight: 600;
+    font-family: 'Oswald', sans-serif;
 }
 
 .section-3 > .site-box > div > .title > div {
     font-size: 300px;
-    font-size: 300;
+    font-weight: 300;
     color: #222222;
     overflow: hidden;
+    font-family: 'Pretendard', sans-serif;
 }
 
 .section-3 > .site-box > div > .title > div > span {
@@ -296,6 +328,7 @@ body.white .section-3 > h3 {
     justify-content: space-between;
     height: 442px;
     overflow: hidden;
+    font-family: 'Pretendard', sans-serif;
 }
 
 .section-3 > .site-box > div > .content > .txt-box {
@@ -406,6 +439,7 @@ body.white .section-3 > h3 {
 /* ------------------------------------------section-4 start------------------------------------------ */
 .section-4 {
     padding: 80px 180px;
+    font-family: 'Oswald', sans-serif;
 }
 
 .section-4 > h3 {
@@ -464,12 +498,12 @@ body.white .section-3 > h3 {
 }
 
 .section-top__content > li > a {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .section-top__content > li:nth-child(1):hover > a > * {
@@ -493,6 +527,7 @@ body.white .section-3 > h3 {
 .section-top__content > li > a > span:last-child {
     font-size: 18px;
     font-weight: 500;
+    font-family: 'Pretendard', sans-serif;
 }
 
 .section-top__content > li:not(:last-child) {
@@ -557,6 +592,7 @@ body.white .section-3 > h3 {
 /* ------------------------------------------footer start------------------------------------------ */
 footer {
     padding: 125px 180px;
+    font-family: 'Oswald', sans-serif;
 }
 
 footer > .ft-box {
@@ -591,4 +627,5 @@ footer > .ft-box > .ft-txt > p {
     font-size: 22px;
     font-weight: 400;
     line-height: 35.2px;
+    font-family: 'Pretendard', sans-serif;
 }
