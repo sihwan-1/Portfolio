@@ -318,7 +318,7 @@ body.white .section-3 > h3 {
 }
 
 .section-3 > .site-box > div:hover > .title > div > span {
-    transform: translateY(0);
+    transform: translateY(10%);
 }
 
 .section-3 > .site-box > div > .content {
@@ -447,6 +447,7 @@ body.white .section-3 > h3 {
     font-size: 20px;
     font-weight: 700;
     color: #ffff33;
+    font-family: "Sequel100Black-45";
 }
 
 .height-100vh {
