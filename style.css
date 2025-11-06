@@ -53,6 +53,80 @@ body.white {
     background-color: #fff;
 }
 
+/* ------------------------------------------splash start------------------------------------------ */
+.splash {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0a0a0a;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.splash-box > span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 300px;
+    color: #ffff33;
+    transform: translate(-50%,-50%);
+}
+
+.splash-box > span.first {
+    animation: moveUp 1.5s ease-out forwards;
+}
+
+.splash-box > span.second {
+    animation: moveRight 1.5s ease-out forwards;
+}
+
+.splash-box > span.second.third {
+    animation: moveRight 1.5s ease-out forwards, moveDown 1.5s ease-out 1.5s forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        top: 50%
+    }
+
+    100% {
+        top: 20% ;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 70%;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        top: 50%
+    }
+
+    100% {
+        top: 80% ;
+    }
+}
+
+
+
+
+/* ------------------------------------------splash end------------------------------------------ */
+
 /* ------------------------------------------header start------------------------------------------ */
 body.white header {
     color: #0a0a0a;
@@ -111,20 +185,20 @@ header > ul > li > a {
     font-weight: 400;
     line-height: 150px;
     transform: translateY(100%);
-    transition: all 1.2s .3s;
+    transition: all 1s .3s;
     display: flex;
 }
 
 .section-1 > .main-title > div:nth-child(2) > h1 {
-    transition: all 1.2s .6s;
+    transition: all 1s .6s;
 }
 
 .section-1 > .main-title > div:nth-child(3) > h1 {
-    transition: all 1.2s .9s;
+    transition: all 1s .9s;
 }
 
 .section-1 > .main-title > div:nth-child(4) > h1 {
-    transition: all 1.2s 1.2s;
+    transition: all 1s 1.2s;
 }
 
 .section-1 > .main-title > div > h1.show {
