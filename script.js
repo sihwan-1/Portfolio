@@ -1,5 +1,16 @@
 AOS.init();
 
+$(document).ready(function() {
+    $(this).scrollTop(0);
+    $("body").css("overflow", "hidden");
+
+    setTimeout(function() {
+        $(".splash").addClass("hide");
+        $(".section-1 .main-title h1").addClass("show");
+        $("body").css("overflow", "auto");
+      }, 4000);
+    });
+
 $(window).on("scroll", function () {
     const section = $(".section-2");
     const outline = section.find(".text-outline");
@@ -36,9 +47,6 @@ $(window).scroll(function() {
     }
 });
 
-$(document).ready(function() {
-      $(".section-1 .main-title h1").addClass("show"); // 자동으로 클래스 추가!
-    });
 
 // 스크롤 트리거 플러그인 활성화
 gsap.registerPlugin(ScrollTrigger);

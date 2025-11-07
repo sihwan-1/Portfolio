@@ -62,7 +62,16 @@ body.white {
     z-index: 9999;
     display: flex;
     justify-content: center;
+    transform: translateY(0);
+    opacity: 1;
     align-items: center;
+    transition: all .8s;
+}
+
+.splash.hide {
+    transform: translateY(-100%);
+    pointer-events: none;
+    opacity: 0;
 }
 
 .splash-box {
@@ -78,18 +87,50 @@ body.white {
     font-size: 300px;
     color: #ffff33;
     transform: translate(-50%,-50%);
+    font-family: 'Oswald', sans-serif;
+}
+
+.splash-box > span.txt {
+    animation: opacity 2s ease-out 3s  forwards;
+    opacity: 0;
+}
+
+.splash-box > span.txt-1 {
+    top: 20%;
+    left: 30%;
+}
+
+.splash-box > span.txt-2 {
+    top: 20%;
+    left: 70%;
+}
+
+.splash-box > span.txt-3 {
+    left: 30%;
+}
+
+.splash-box > span.txt-5 {
+    top: 80%;
+    left: 30%;
+}
+
+.splash-box > span.txt-6 {
+    top: 80%;
 }
 
 .splash-box > span.first {
-    animation: moveUp 1.5s ease-out forwards;
+    animation: moveUp 1s ease-out .5s  forwards;
+    opacity: 1;
 }
 
 .splash-box > span.second {
-    animation: moveRight 1.5s ease-out forwards;
+    animation: moveRight 1s ease-out .5s  forwards;
+    opacity: 1;
 }
 
 .splash-box > span.second.third {
-    animation: moveRight 1.5s ease-out forwards, moveDown 1.5s ease-out 1.5s forwards;
+    animation: moveRight 1s ease-out .5s forwards, moveDown 1s ease-out 1.7s forwards;
+    opacity: 1;
 }
 
 @keyframes moveUp {
@@ -119,6 +160,16 @@ body.white {
 
     100% {
         top: 80% ;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
     }
 }
 
