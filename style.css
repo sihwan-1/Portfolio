@@ -91,31 +91,37 @@ body.white {
 }
 
 .splash-box > span.txt {
-    animation: opacity 2s ease-out 3s  forwards;
+    animation: opacity 2s ease-out 2s  forwards;
     opacity: 0;
+    transform: translate(-50%,-50%);
 }
 
 .splash-box > span.txt-1 {
     top: 20%;
     left: 30%;
+    animation-delay: 1s;
 }
 
 .splash-box > span.txt-2 {
     top: 20%;
     left: 70%;
+    animation-delay: 1.3s;
 }
 
 .splash-box > span.txt-3 {
     left: 30%;
+    animation-delay: 1.2s;
 }
 
 .splash-box > span.txt-5 {
     top: 80%;
     left: 30%;
+    animation-delay: 1.7s;
 }
 
 .splash-box > span.txt-6 {
     top: 80%;
+    animation-delay: 1.6s;
 }
 
 .splash-box > span.first {
@@ -129,7 +135,7 @@ body.white {
 }
 
 .splash-box > span.second.third {
-    animation: moveRight 1s ease-out .5s forwards, moveDown 1s ease-out 1.7s forwards;
+    animation: moveRight 1s ease-out .5s forwards, moveDown 1s ease-out 3s forwards;
     opacity: 1;
 }
 
