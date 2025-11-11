@@ -489,6 +489,7 @@ body.white .section-3 > h3 {
 
 .section-3 > .site-box > div > .content > .txt-box > div {
     display: flex;
+    margin-bottom: 40px;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > div > span {
@@ -509,6 +510,39 @@ body.white .section-3 > h3 {
 .section-3 > .site-box > div > .content > .txt-box > div > span:nth-child(4) {
     padding-left: 10px;
 }
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn {
+    display: inline-flex;
+    gap: 30px;
+    padding: 8px 8px 8px 30px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn > span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn > .arrow {
+    background-color: #fff;
+    padding: 4px;
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn > .arrow > img {
+    width: 16px;
+    height: 12px;
+}
+
 
 .section-3 > .site-box > div > .content > .img-box {
     width: 504px;
@@ -544,9 +578,6 @@ body.white .section-3 > h3 {
     visibility: visible;
 }
 
-.section-3 > .site-box > div:hover > .content > .img-box:hover > img {
-    filter: brightness(70%);
-}
 
 .section-3 > .site-box > div > .content > .img-box > img {
     filter: blur(8px);
