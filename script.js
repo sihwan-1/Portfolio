@@ -36,13 +36,13 @@ $(window).on("scroll", function () {
 $(window).scroll(function() {
     var scrollPos = $(window).scrollTop();
 
-    if (scrollPos < 710){
+    if (scrollPos < 610) {
     $("body").removeClass("white");
     }
-    if (scrollPos > 720) {
+    if (scrollPos > 611) {
     $("body").addClass("white");
     }
-    if (scrollPos > 1820){
+    if (scrollPos > 1520) {
     $("body").removeClass("white");
     }
 });
@@ -99,6 +99,8 @@ function SectionTop__init() {
         var $selectedBgLiChild = $bgLiChild.eq(index);
 
         $selectedBgLi.addClass("active");
+        
+
 
         var timeline = gsap.timeline();
 
@@ -130,6 +132,7 @@ function SectionTop__init() {
         var $selectedBgLiChild = $bgLiChild.eq(index);
 
         $selectedBgLi.removeClass("active");
+
 
         killTimeline($selectedBgLi);
         $selectedBgLi.css({
