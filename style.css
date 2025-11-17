@@ -681,6 +681,11 @@ body.white .section-3 > h3 {
     color: #1D2C4A;
 }
 
+.section-top__content > li.active > a > * {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .section-top__content > li > a > span:first-child {
     display: block;
     font-size: 100px;

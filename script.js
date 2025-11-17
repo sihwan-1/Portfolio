@@ -96,12 +96,12 @@ function SectionTop__init() {
         var $this = $(this);
         var index = $this.index();
         var $selectedBgLi = $bgLi.eq(index);
-        var $selectedCoLi = $this.eq(index);
-
+        var $selectedCoLi = $contentLi.eq(index);
         var $selectedBgLiChild = $bgLiChild.eq(index);
 
         $selectedBgLi.addClass("active");
-        $selectedCoLi.addClass("active");
+        $selectedCoLi.removeClass("active");
+        $selectedCoLi.siblings().addClass("active");
         
 
 
@@ -132,11 +132,12 @@ function SectionTop__init() {
         var $this = $(this);
         var index = $this.index();
         var $selectedBgLi = $bgLi.eq(index);
-        var $selectedCoLi = $this.eq(index);
+        var $selectedCoLi = $contentLi.eq(index);
         var $selectedBgLiChild = $bgLiChild.eq(index);
 
         $selectedBgLi.removeClass("active");
         $selectedCoLi.removeClass("active");
+        $selectedCoLi.siblings().removeClass("active");
 
 
         killTimeline($selectedBgLi);
