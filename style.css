@@ -466,6 +466,7 @@ body.white .section-3 > h3 {
     overflow: hidden;
     transform: translateY(100%);
     transition: all 0.7s 0.2s;
+    padding-bottom: 10px;
 }
 
 .section-3 > .site-box > div:hover > .content > .txt-box {
@@ -519,29 +520,68 @@ body.white .section-3 > h3 {
 
 .section-3 > .site-box > div > .content > .txt-box > .view-btn {
     display: inline-flex;
-    gap: 30px;
-    padding: 8px 8px 8px 30px;
+    padding: 8px 8px 8px 0px;
     border: 1px solid #fff;
-    border-radius: 10px;
+    border-radius: 100px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    width: 134px;
+    height: 44px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn::before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    border-radius: 100px 0 0 100px;
+    transition: all .5s;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn:hover::before {
+    width: 100%;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > .view-btn > span {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
+    opacity: 0;
+    visibility: hidden;
+    color: #0a0a0a;
+    transition: all .5s;
+    position: absolute;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn:hover > span {
+    opacity: 1;
+    visibility: visible;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > .view-btn > .arrow {
     background-color: #fff;
     padding: 4px;
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
+    width: 44px;
+    height: 44px;
+    border-radius: 100px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.section-3 > .site-box > div > .content > .txt-box > .view-btn:hover > .arrow {
+    left: 68%;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > .view-btn > .arrow > img {
