@@ -165,21 +165,20 @@ body.white {
     bottom: 5%;
     right: 10%;
     cursor: pointer;
-}
-
-.splash-box > .skip::before {
-    content: "";
-    top: 110%;
-    left: 0;
-    width: 110%;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
 }
 
 .splash-box > .skip > span {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 400;
+    display: block;
+}
+
+.splash-box > .skip > img {
+    width: 12px;
 }
 
 @keyframes moveUp {
@@ -221,9 +220,6 @@ body.white {
         opacity: 1;
     }
 }
-
-
-
 
 /* ------------------------------------------splash end------------------------------------------ */
 
