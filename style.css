@@ -139,6 +139,28 @@ body.white {
     opacity: 1;
 }
 
+.splash-box > .skip {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    cursor: pointer;
+}
+
+.splash-box > .skip::before {
+    content: "";
+    top: 110%;
+    left: 0;
+    width: 110%;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+}
+
+.splash-box > .skip > span {
+    font-size: 20px;
+    font-weight: 400;
+}
+
 @keyframes moveUp {
     0% {
         top: 50%
@@ -737,6 +759,11 @@ body.white .section-3 > h3 {
     font-weight: 500;
     font-family: 'Pretendard', sans-serif;
 }
+
+.section-top__content > li:hover > a > span:last-child {
+    opacity: 0;
+    visibility: hidden;
+} 
 
 .section-top__content > li:not(:last-child) {
     border-right: 1px solid rgba(255, 255, 255, 0.5);

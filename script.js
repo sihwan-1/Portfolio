@@ -1,4 +1,13 @@
 AOS.init();
+function Skip () {
+    $(".splash-box > .skip").click(function () {
+        $(".splash").addClass("hide");
+        $(".section-1 .main-title h1").addClass("show");
+        $("body").css("overflow", "auto");
+    });
+}
+Skip ();
+
 
 $(document).ready(function() {
     $(this).scrollTop(0);
