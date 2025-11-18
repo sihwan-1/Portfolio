@@ -53,6 +53,27 @@ body.white {
     background-color: #fff;
 }
 
+/* 스크롤바 전체 */
+::-webkit-scrollbar {
+  width: 10px;   /* 가로 스크롤은 height */
+}
+
+/* 스크롤바 트랙(배경) */
+::-webkit-scrollbar-track {
+  background: #EDEDED; 
+}
+
+/* 스크롤바 손잡이 */
+::-webkit-scrollbar-thumb {
+  background: #111111;
+  border-radius: 10px;
+}
+
+/* 손잡이에 마우스 올렸을 때 */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffff33;
+}
+
 /* ------------------------------------------splash start------------------------------------------ */
 .splash {
     width: 100%;
