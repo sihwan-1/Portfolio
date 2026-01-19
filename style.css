@@ -536,6 +536,7 @@ body.white .section-3 > h3 {
 .section-3 > .site-box > div > .content > .txt-box > div {
     display: flex;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > div > span {
@@ -544,6 +545,7 @@ body.white .section-3 > h3 {
     font-size: 16px;
     font-weight: 400;
     color: #949494;
+    white-space: nowrap;
 }
 
 .section-3 > .site-box > div > .content > .txt-box > div > span:first-child,
@@ -881,3 +883,60 @@ footer > .ft-box > .ft-txt > p {
     line-height: 35.2px;
     font-family: 'Pretendard', sans-serif;
 }
+
+/* ------------------------------------------반응형 1440px start------------------------------------------ */
+
+@media (max-width: 1440px) {
+    .section-1 {
+        padding: 60px 0 135px 0;
+    }
+
+    .section-1 > .main-title > div > h1 {
+        font-size: 98px;
+        line-height: 113px;
+    }
+
+    .section-1 .circle-box > div {
+        width: 600px;
+        height: 600px;
+    }
+
+    .section-2 > .text-outline {
+        right: -35%;    
+    }
+
+    .section-3 > .site-box > div {
+    padding: 60px 0;
+    }
+
+    .section-3 > .site-box > div:hover {
+        height: 375px;
+    }
+
+    .section-3 > .site-box > div > .content {
+        width: 740px;
+        height: 360px;
+    }
+
+    .section-3 > .site-box > div > .title > span {
+        font-size: 53px;
+    }
+
+    .section-3 > .site-box > div > .title > div {
+        font-size: 225px;
+    }
+
+    .section-3 > .site-box > div > .content > .txt-box > span:nth-child(2) {
+        font-size: 19px
+    }
+
+    .section-3 > .site-box > div > .content > .txt-box > div > span:nth-child(5) { 
+        padding-left: 0;
+    }
+
+    .section-3 > .site-box > div > .content > .img-box {
+        width: 378px;
+        height: 222px;
+    }
+}
+/* ------------------------------------------반응형 1440px end------------------------------------------ */
